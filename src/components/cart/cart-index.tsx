@@ -1,4 +1,4 @@
-import { CartIcon } from '@/components/icon-cart';
+import { CartIcon } from '@/components/cart/icon-cart';
 import { styled } from 'styled-components';
 
 const Container = styled.div`
