@@ -1,3 +1,4 @@
+import Footer from '@/components/footer/footer';
 import { CartProvider } from '@/hooks/useCartContext';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import type { Metadata } from 'next';
@@ -23,7 +24,10 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className={montserrat.className}>
         <QueryClientProvider client={new QueryClient()}>
-          <CartProvider>{children}</CartProvider>
+          <CartProvider>
+            {children}
+            <Footer />
+          </CartProvider>
         </QueryClientProvider>
       </body>
     </html>
